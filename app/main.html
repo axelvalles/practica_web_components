@@ -1,0 +1,10 @@
+<base href="/app/">
+<a is="router-link" href="/app/">Page 1</a>
+<a is="router-link" href="/app/about">Page 2</a>
+
+<a-router  style="display: block;">
+    <a-outlet>This content never shows because of the last catch all route</a-outlet>
+    <a-route path="/" element="page-home"></a-route>
+    <a-route path="/about" element="page-about"></a-route>
+    <a-route path="*"><template>Page not found</template></a-route>
+</a-router>
